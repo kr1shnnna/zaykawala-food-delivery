@@ -83,3 +83,72 @@ li{
 .btn:hover{
     background: var(--secondary-red);
 }
+
+
+.cart-icon{
+
+    font-size:1.5rem;
+    position:relative;
+}
+
+.cart-icon .cart-value{
+    position:absolute;
+    font-size:.85rem;
+    width:20px;
+    aspect-ratio:1;
+    border-radius:100vw;
+    background: var(--primary-red);
+    color:var(--white);
+    text-align:center;
+    line-height:20px;
+    top:50%;
+    right:-10px;    
+}
+
+.desktop-action .hamburger{
+    font-size:1.5rem;
+    display:none;
+}
+
+
+.mobile-menu{
+    display:none;
+}
+
+
+@media screen and (max-width:780px){
+    .nav-list,
+    .desktop-action .btn{
+        display:none;
+    }
+
+    .desktop-action .hamburger{
+        display:block;
+    }
+
+    .mobile-menu{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:2rem;
+        position:absolute;
+        top:20%;
+        left:-100%;
+        transform:translateX(-50%);
+        width:20rem;
+        padding:2rem;
+        background: var(--white);
+        border:.1rem solid var(--primary-red);
+        border-radius:1rem;
+        box-shadow:rgba(0, 0, 0, 0.05) 8px 8px 8px,
+        rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+        transition:all .5s ease-in-out;
+    }
+
+    .mobile-menu-active{
+    left:50%;
+    transform:translateX(-50%);
+}
+}
+
